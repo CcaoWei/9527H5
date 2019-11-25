@@ -1,0 +1,122 @@
+
+
+$highlight-color: #F90;
+$baseFontsize: 16px;
+
+@function px2rem($pixel) {
+  @if (unitless($pixel)) {
+    $pixel: $pixel*1px;
+  }
+  @return $pixel/$baseFontsize *1rem;
+}
+
+
+@mixin bgs($url) {
+  background-image: url($url) no-repeat;
+  -webkit-background-size:100%;
+  background-size:100%;
+}
+
+@mixin fl-c-m {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin fl-st-m {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@mixin fl-sb-m {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin fl-c-sb {
+  display: flex;
+  justify-content: center;
+  align-items: space-between;
+}
+
+
+@keyframes rotating {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../../assets/styles/fonts/icomoon.eot?iswyde');
+  src:  url('../../assets/styles/fonts/icomoon.eot?iswyde#iefix') format('embedded-opentype'),
+    url('../../assets/styles/fonts/icomoon.ttf?iswyde') format('truetype'),
+    url('../../assets/styles/fonts/icomoon.woff?iswyde') format('woff'),
+    url('../../assets/styles/fonts/icomoon.svg?iswyde#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-down:before {
+  content: "\e904";
+}
+.icon-fail:before {
+  content: "\e900";
+}
+.icon-success:before {
+  content: "\e901";
+}
+.icon-back:before {
+  content: "\e902";
+}
+.icon-arrow:before {
+  content: "\e903";
+}
+.icon-loading:before {
+  display: block;
+  content: "\e97c";
+  animation: rotating 3s linear infinite;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+img {
+  vertical-align: top;
+  overflow: hidden;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+div {
+  box-sizing: border-box;
+}
+
+
+
+

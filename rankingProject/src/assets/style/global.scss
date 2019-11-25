@@ -1,0 +1,34 @@
+$highlight-color: #F90;
+$baseFontsize: 16px;
+
+@function px2rem($pixel) {
+  @if (unitless($pixel)) {
+    $pixel: $pixel*1px;
+  }
+  @return $pixel/$baseFontsize/10 *1rem;
+}
+
+@mixin bgs($url) {
+  background-image: url($url) no-repeat;
+  -webkit-background-size:100%;
+  background-size:100%;
+}
+
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+div {
+  box-sizing: border-box;
+}
+
+
